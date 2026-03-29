@@ -31,6 +31,57 @@
 
 <body>
 
+<button id="playBtn">▶ Press here</button>
+
+<video id="vid" playsinline>
+  <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+</video>
+
+<script>
+  const btn = document.getElementById("playBtn");
+  const vid = document.getElementById("vid");
+
+  btn.onclick = () => {
+    btn.style.display = "none";
+    vid.style.display = "block";
+    vid.play();
+  };
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #playBtn {
+    background: black;
+    border: 2px solid white;
+    color: white;
+    padding: 20px 40px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  video {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+
+<body>
+
 <button id="playBtn">▶ Play Video</button>
 
 <video id="vid" playsinline preload="none">
